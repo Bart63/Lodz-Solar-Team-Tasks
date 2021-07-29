@@ -1,0 +1,6 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
