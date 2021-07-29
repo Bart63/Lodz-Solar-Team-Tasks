@@ -1,4 +1,5 @@
-<form>
-    <input type="number"/>
-    <input type="submit"/>
-  </form>
+<form [formGroup]="summaryForm" (ngSubmit)="onSubmit()">
+    <label for="minutes">Minuty: </label>
+    <input type="number" name="minutes" formControlName="minutes"/>
+    <input type="submit" value="Generuj">
+</form>
