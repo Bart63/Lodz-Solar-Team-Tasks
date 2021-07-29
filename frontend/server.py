@@ -2,6 +2,7 @@
 import flask
 import numpy as np
 from flask import jsonify, request
+from flask_cors import CORS, cross_origin
 from datetime import datetime
 from random import randint, choice
 from random import random as randfloat
@@ -10,6 +11,8 @@ randstring = lambda *s: choice([s])
 randlist = lambda size, mul: [(randfloat() * mul) for _ in range(size)]
 
 app = flask.Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.config["DEBUG"] = True
 
 # Create some test data for our catalog in the form of a list of dictionaries.
@@ -42,6 +45,7 @@ summary = {
 }
 
 @app.route('/api/car', methods=['GET'])
+@cross_origin()
 def api_recent():
 	car['general']['timestamp'] = datetime.now()
 	car['general']['driveMode'] = randstring('power', 'eco')
@@ -56,6 +60,7 @@ def api_recent():
 	return jsonify(car)
 
 @app.route('/api/summary', methods=['GET'])
+@cross_origin()
 def api_summary():
 	if 'time' in request.args:
 		time = int(request.args['time'])
