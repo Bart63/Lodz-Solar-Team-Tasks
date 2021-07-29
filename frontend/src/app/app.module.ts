@@ -14,7 +14,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
   { path: '', component: TableComponent },
-  { path: 'summary', component: ChartComponent }
+  { path: 'summary', component: ChartComponent, pathMatch: 'full' },
+  { path: 'summary/:minutes', component: ChartComponent, pathMatch: 'full' },
 ]
 
 @NgModule({

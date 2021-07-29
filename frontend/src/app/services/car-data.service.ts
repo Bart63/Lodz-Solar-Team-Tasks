@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { CarSummary } from '../CarSummary';
+import { ChartData } from '../ChartData';
 import { Observable, of } from 'rxjs';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Access-Control-Allow-Origin': '*'
-  })
-}
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +15,10 @@ export class CarDataService {
   ) { }
 
   getSummary(): Observable<CarSummary> {
-    return this.http.get<CarSummary>(this.apiUrl + 'api/car', httpOptions);
+    return this.http.get<CarSummary>(this.apiUrl + 'api/car');
+  }
+
+  getChartData(minutes: number): Observable<ChartData> {
+    return this.http.get<ChartData>(this.apiUrl + `api/summary?time=${minutes}`)
   }
 }

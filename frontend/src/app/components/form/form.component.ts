@@ -26,6 +26,6 @@ export class FormComponent implements OnInit {
       alert("Wprowadź dodatnią liczbę minut");
       return;
     }
-    this.router.navigateByUrl('/summary');
+    this.router.navigateByUrl(`/summary/${minutes}`);
   }
 }
