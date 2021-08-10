@@ -1,1 +1,69 @@
-<p>{{table}}</p>
+<table>
+    <thead>
+    <tr>
+        <th colspan="2">General</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Timestamp</td>
+        <td>{{summary.general.timestamp}}</td>
+    </tr>
+    <tr>
+        <td>Speed</td>
+        <td>{{summary.general.speed}}</td>
+    </tr>
+    <tr>
+        <td>Milage</td>
+        <td>{{summary.general.mileage}}</td>
+    </tr>
+    <tr>
+        <td>Drive Mode</td>
+        <td>{{summary.general.driveMode}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <th colspan="2">Battery</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>State Of Charge</td>
+        <td>{{summary.battery.stateOfCharge}}</td>
+    </tr>
+    <tr>
+        <td>Temperature</td>
+        <td>{{summary.battery.temperature}}</td>
+    </tr>
+    <tr>
+        <td>Overheat</td>
+        <td>{{summary.battery.errors.overheat}}</td>
+    </tr>
+    <tr>
+        <td>No Signal</td>
+        <td>{{summary.battery.errors.noSignal}}</td>
+    </tr>
+    <tr>
+        <td>Other</td>
+        <td>{{summary.battery.errors.other}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <th colspan="2">Tires Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of summary.tires.pressure; let i=index">
+        <td>{{i}}</td>
+        <td>{{p}}</td>
+    </tr>
+    </tbody>
+</table>

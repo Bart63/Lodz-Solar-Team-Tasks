@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+thead th {
+    background-color: rgb(173, 173, 173);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tbody tr td {
+    width: 50%;
+}

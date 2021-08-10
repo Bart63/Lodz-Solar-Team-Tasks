@@ -7,7 +7,7 @@ from datetime import datetime
 from random import randint, choice
 from random import random as randfloat
 randbool = lambda: choice([True, False])
-randstring = lambda *s: choice([s])
+randstring = lambda s: choice(s)
 randlist = lambda size, mul: [(randfloat() * mul) for _ in range(size)]
 
 app = flask.Flask(__name__)
@@ -48,7 +48,7 @@ summary = {
 @cross_origin()
 def api_recent():
 	car['general']['timestamp'] = datetime.now()
-	car['general']['driveMode'] = randstring('power', 'eco')
+	car['general']['driveMode'] = randstring(['power', 'eco'])
 	car['battery']['stateOfCharge'] = randfloat() * 100
 	car['battery']['errors']['other'] = randbool()
 	car['tires']['pressure'] = randlist(4, 100)
