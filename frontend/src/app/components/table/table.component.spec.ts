@@ -1,8 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClient } from '@angular/common/http';
 
 import { TableComponent } from './table.component';
 
-describe('TableComponent', () => {
+describe('TableComponent', () =>
+{
   let component: TableComponent;
   let fixture: ComponentFixture<TableComponent>;
 
@@ -14,6 +17,9 @@ describe('TableComponent', () => {
   });
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule]
+    });
     fixture = TestBed.createComponent(TableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
