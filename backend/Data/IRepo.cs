@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Backend.Data
 {
-    interface IRepo
+    public interface IRepo
     {
         IEnumerable<Measurement> GetMeasurements();
     }

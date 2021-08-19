@@ -13,7 +13,12 @@ namespace Backend.Controllers
     [ApiController]
     public class MeasurementsController : ControllerBase
     {
-        private readonly MockRepo _repo = new MockRepo();
+        private readonly IRepo _repo;
+
+        public MeasurementsController(IRepo repo)
+        {
+            _repo = repo;
+        }
 
         [HttpGet]
         public ActionResult <IEnumerable<Measurement>> GetAllMeasurements()
