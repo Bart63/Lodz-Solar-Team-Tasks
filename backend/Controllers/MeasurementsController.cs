@@ -54,5 +54,13 @@ namespace Backend.Controllers
             _repo.CreateMeasurement(measurement);
             return CreatedAtRoute("GetMeasurement", new { id = measurement.Id.ToString() }, measurement);
         }
+
+        [Route("api/predict")]
+        [HttpGet]
+        public ActionResult<Measurement> GetRecentMeasurement([FromQuery] double time)
+        {
+            Measurement item = _repo.Predict(time);
+            return Ok(item);
+        }
     }
 }

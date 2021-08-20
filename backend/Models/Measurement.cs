@@ -11,8 +11,8 @@ namespace Backend.Models
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string Id { get; set; }
-        public decimal Timestamp { get; set; }
-        public decimal CurrentVoltage { get; set; }
+        public double Timestamp { get; set; }
+        public double CurrentVoltage { get; set; }
         public bool Error { get; set; }
     }
 }

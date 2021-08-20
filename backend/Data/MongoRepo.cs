@@ -35,5 +35,10 @@ namespace Backend.Data
         {
             return _ms.GetRecent();
         }
+
+        public Measurement Predict(double time)
+        {
+            return _ms.Predict(time);
+        }
     }
 }

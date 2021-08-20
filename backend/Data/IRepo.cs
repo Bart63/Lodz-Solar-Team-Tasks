@@ -11,6 +11,7 @@ namespace Backend.Data
         IEnumerable<Measurement> GetMeasurements();
         Measurement GetMeasurement(string id);
         Measurement GetRecent();
+        Measurement Predict(double time);
         void CreateMeasurement(Measurement measurement);
     }
 }
