@@ -34,13 +34,13 @@ namespace Backend.Services
         {
             double now = GetRecent().Timestamp;
             List<Measurement> measurements = _measurements.Find(x => !x.Error).Limit(10).ToList();
-            
-            if(measurements.Count<2)
+            List<double> timestamps = measurements.Select(i => i.Timestamp).ToList();
+
+            if (measurements.Count<2 || timestamps.GroupBy(t => t).Count() == 1)
             {
                 return new Measurement { CurrentVoltage = 0, Timestamp = now + time, Error = true };
             }
 
-            List<double> timestamps = measurements.Select(i => i.Timestamp).ToList();
             List<double> voltages = measurements.Select(i => i.CurrentVoltage).ToList();
 
             LinearRegression.Solve(timestamps, voltages, out double intercept, out double slope);

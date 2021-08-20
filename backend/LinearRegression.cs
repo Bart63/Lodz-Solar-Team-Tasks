@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Backend.Services
+namespace Backend
 {
     public class LinearRegression
     {
@@ -13,6 +13,12 @@ namespace Backend.Services
             out double yIntercept,
             out double slope)
         {
+            if(xVals.Count != yVals.Count || xVals.Count<2)
+            {
+                yIntercept = double.NaN;
+                slope = double.NaN;
+                return;
+            }
 
             double sumOfX = 0;
             double sumOfY = 0;
