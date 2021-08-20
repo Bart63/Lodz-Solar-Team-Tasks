@@ -9,5 +9,8 @@ namespace Backend.Data
     public interface IRepo
     {
         IEnumerable<Measurement> GetMeasurements();
+        Measurement GetMeasurement(string id);
+        Measurement GetRecent();
+        void CreateMeasurement(Measurement measurement);
     }
 }

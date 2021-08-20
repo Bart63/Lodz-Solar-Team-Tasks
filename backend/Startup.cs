@@ -32,7 +32,7 @@ namespace Backend
             services.AddSingleton<IMeasurementsDatabaseSettings>(sp => sp.GetRequiredService<IOptions<MeasurementsDatabaseSettings>>().Value);
             services.AddSingleton<MeasurementService>();
             services.AddControllers();
-            services.AddScoped<IRepo, MockRepo>();
+            services.AddScoped<IRepo, MongoRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

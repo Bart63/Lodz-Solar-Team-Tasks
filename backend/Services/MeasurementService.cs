@@ -19,7 +19,8 @@ namespace Backend.Services
             _measurements = database.GetCollection<Measurement>(settings.MeasurementsCollectionName);
         }
 
-        public List<Measurement> Get() => _measurements.Find(x => true).ToList();
+        public List<Measurement> GetAll() => _measurements.Find(x => true).ToList();
+        public Measurement Get(string id) => _measurements.Find(m => m.Id == id).FirstOrDefault();
 
         public Measurement GetRecent() => _measurements.Find(x => true).SortByDescending(m => m.Timestamp).Limit(1).FirstOrDefault();
 

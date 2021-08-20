@@ -10,9 +10,9 @@ namespace Backend.Models
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-        public int Id { get; set; }
-        public float Timestamp { get; set; }
-        public float CurrentVoltage { get; set; }
+        public string Id { get; set; }
+        public decimal Timestamp { get; set; }
+        public decimal CurrentVoltage { get; set; }
         public bool Error { get; set; }
     }
 }
