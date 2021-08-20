@@ -6106,8 +6106,8 @@
     },
     "Backend/1.0.0": {
       "type": "project",
-      "path": "../backend/Backend.csproj",
-      "msbuildProject": "../backend/Backend.csproj"
+      "path": "../Backend/Backend.csproj",
+      "msbuildProject": "../Backend/Backend.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6126,11 +6126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend.Tests\\Backend.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\Backend.Tests\\Backend.Tests.csproj",
       "projectName": "Backend.Tests",
-      "projectPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend.Tests\\Backend.Tests.csproj",
+      "projectPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\Backend.Tests\\Backend.Tests.csproj",
       "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend.Tests\\obj\\",
+      "outputPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\Backend.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -6151,8 +6151,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\backend\\Backend.csproj": {
-              "projectPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\backend\\Backend.csproj"
+            "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\backend\\Backend.csproj": {
+              "projectPath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\backend\\Backend.csproj"
             }
           }
         }

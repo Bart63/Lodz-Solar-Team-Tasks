@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XPV2X3PfZn5rYM6x2j23LrwnAjFvsu1QuBaeqnifgyKPW5YHEJZS71EGUnXatFQzG75nK/HwW6nHOSJ0vLM0iA==",
+  "dgSpecHash": "QcE5tMuj+wh43kID30uHZVHnramz0sDmmqzkmUWHCZ5uilnJ3ztKmyL1oHdrqlqsrzs5hcXEk6g9HCZZ/zUfOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend.Tests\\Backend.Tests.csproj",
+  "projectFilePath": "C:\\Users\\barte\\Documents\\Lodz Solar Team\\Lodz-Solar-Team-Tasks\\Backend\\Backend.Tests\\Backend.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barte\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\barte\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
